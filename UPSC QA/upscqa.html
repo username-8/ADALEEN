@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart review - adaptive Learning Companion, to identify knowledge gaps  & fix them in the most efficient way.">
+    <title>Smart Review - Adaptive Learning Companion</title>
+    <link rel="stylesheet" href="upscqa.css">
+    <style>
+        nav
+            {
+                display: flex;
+                justify-content: space-between;
+                background: linear-gradient(40deg, rgb(0, 4, 236) 10%, rgb(13, 70, 175) 30%, rgb(53, 6, 180));
+                padding: 5px;
+                padding-right: 25px;
+                align-items: center;
+            }
+        nav a
+            {
+                color: aliceblue;
+                text-decoration: none
+            }
+        .top-bar-center
+            {
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
+            }
+    </style>
+</head>
+<body>
+    <!-- Improved Navigation -->
+<nav class="navbar" aria-label="Main navigation">
+    <div class="navbar_brand">
+        <a href="/" class="navbar_logo-link">
+            <img 
+                src="image/Adaleen_temp_logo.png" 
+                alt="Smart Review Logo"
+                class="navbar_logo-image"
+                width="100" 
+                height="40"
+            >
+        </a>
+    </div>
+    
+    <div class="navbar_menu">
+        <a href="/dashboard" class="navbar_link">Dashboard</a>
+        <a href="/review-space" class="navbar_link" aria-current="page">Review Space</a>
+        <a href="/topics" class="navbar_link">Topics</a>
+        <a href="/pricing" class="navbar_link">Pricing</a>
+        <a href="/about" class="navbar_link">About Us</a>
+    </div>
+    
+    <div class="navbar_actions">
+        <a href="/login" class="button button--login">Log In</a>
+    </div>
+</nav>
+
+<!-- Improved Hero Section -->
+<header class="hero">
+    <div class="hero_content">
+        <h1 class="hero_title">Smart Review</h1>
+        <p class="hero_description">
+            <em>Your Adaptive Learning Companion</em>
+        </p>
+        <p class="hero_subtitle">
+            Identify your knowledge gaps and fix them in the most efficient way
+        </p>
+    </div>
+</header>
+
+<!-- Improved Main Form -->
+<main class="main">
+    <section class="goal-section">
+        <h2 class="section_title">Specify Your Objective</h2>
+        
+        <form class="goal-form" action="/submit-goal" method="POST">
+            <div class="form_group">
+                <label for="review-topic" class="form_label">Topic for Review</label>
+                <input 
+                    type="text" 
+                    id="review-topic" 
+                    name="review-topic" 
+                    class="form_input"
+                    placeholder="Enter the topic you want to review"
+                    required
+                >
+            </div>
+
+            <fieldset class="form_group">
+                <legend class="form_label">Select Exam Type</legend>
+                <div class="checkbox-group">
+                    <label class="checkbox">
+                        <input 
+                            type="checkbox" 
+                            name="exam" 
+                            value="prelims"
+                            class="checkbox_input"
+                        >
+                        <span class="checkbox_label">Prelims</span>
+                    </label>
+                    
+                    <label class="checkbox">
+                        <input 
+                            type="checkbox" 
+                            name="exam" 
+                            value="mains"
+                            class="checkbox_input"
+                        >
+                        <span class="checkbox_label">Mains</span>
+                    </label>
+                    
+                    <label class="checkbox">
+                        <input 
+                            type="checkbox" 
+                            name="exam" 
+                            value="interview"
+                            class="checkbox_input"
+                        >
+                        <span class="checkbox_label">Interview</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="form_group">
+                <label for="resource" class="form_label">Learning Resource</label>
+                <input 
+                    type="text" 
+                    id="resource" 
+                    name="resource" 
+                    class="form_input"
+                    placeholder="Enter the resource you are using"
+                    required
+                >
+            </div>
+
+            <div class="form_group">
+                <label for="learn-date" class="form_label">Initial Learning Date</label>
+                <input 
+                    type="date" 
+                    id="learn-date" 
+                    name="learn-date" 
+                    class="form_input"
+                    required
+                >
+            </div>
+
+            <div class="form_group">
+                <label for="review-date" class="form_label">Last Review Date</label>
+                <input 
+                    type="date" 
+                    id="review-date" 
+                    name="review-date" 
+                    class="form_input"
+                    required
+                >
+            </div>
+
+            <div class="form_group">
+                <label for="special-request" class="form_label">Additional Context</label>
+                <input 
+                    type="text" 
+                    id="special-request" 
+                    name="special-request" 
+                    class="form_input"
+                    placeholder="Any specific requirements or notes?"
+                >
+            </div>
+
+            <div class="form_actions">
+                <button 
+                    type="submit" 
+                    class="button button--primary"
+                >
+                    Submit
+                </button>
+                <button 
+                    type="reset" 
+                    class="button button--secondary"
+                >
+                    Reset
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Improved Response Section -->
+    <section class="response-section" aria-label="Generated Response">
+        <h2 class="section_title">Generated Response</h2>
+        <div class="response_content">
+            <textarea 
+                id="response-output"
+                class="response_textarea"
+                placeholder="Response will appear here"
+                aria-label="Generated response content"
+                readonly
+            ></textarea>
+            <div class="response_actions">
+                <button 
+                    type="button" 
+                    class="button button--secondary"
+                    aria-label="Copy response"
+                >
+                    Copy
+                </button>
+                <button 
+                    type="button" 
+                    class="button button--secondary"
+                    aria-label="Regenerate response"
+                >
+                    Regenerate
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Improved Footer -->
+<footer class="footer">
+    <div class="footer_content">
+        <p class="footer_copyright">© 2024 Smart Review. All rights reserved.</p>
+        <nav class="footer_nav" aria-label="Footer navigation">
+            <a href="/privacy" class="footer_link">Privacy Policy</a>
+            <a href="/terms" class="footer_link">Terms of Service</a>
+            <a href="/contact" class="footer_link">Contact Us</a>
+        </nav>
+    </div>
+</footer>

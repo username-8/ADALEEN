@@ -1,0 +1,129 @@
+
+
+
+<header class="hero" role="banner">
+<nav class="navigation_bar" role="navigation" aria-label="Main navigation">
+    <a href="#home">home Logo</a> <!-- will use icon/logo as button. to be inserted later.  -->
+    <a href="#dashboard">Dashboard</a>
+    <a href="#review_space" aria-current="page">Review space</a>
+    <a href="#topics">Topics</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About Us</a>
+    <a href="#login">Log In</a></nav>
+<!-- hero -->
+<h1>Smart Review</h1>
+<p><em>Your Adaptive Learning companion</em> <br>
+identify your knowledge gaps  & fix them in the most efficient way
+</p>
+</header>
+
+
+
+
+
+
+
+
+<!-- 1. DOCTYPE and Basic Structure -->
+<!DOCTYPE html>  <!-- ✓ Correct HTML5 DOCTYPE declaration -->
+<html lang="en"> <!-- ✓ Good: Includes language attribute -->
+<head>
+    <meta charset="UTF-8"> <!-- ✓ Correct charset declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✓ Good: Responsive viewport -->
+    <meta name="description" content="Smart review - adaptive Learning Companion, to identify knowledge gaps  & fix them in the most efficient way.">
+    <!-- ISSUE: Description could be more concise and specific -->
+    
+    <title>Smart review - adaptive Learning Companion</title>
+    <!-- ISSUE: Inconsistent capitalization (Smart review vs. Learning Companion) -->
+    
+    <link rel="stylesheet" href="upscqa.css">
+    <!-- ISSUE: Non-descriptive filename, consider more semantic naming -->
+
+<!-- 2. Header Section -->
+<header class="header" role="banner">
+    <!-- ISSUE: Redundant class 'header' when using semantic <header> -->
+    <h1>Smart Review</h1>
+    <!-- ISSUE: Inconsistent branding (Smart review vs Smart Review) -->
+    <p><em>Your Adaptive Learning companion</em> <br>
+    <!-- ISSUES: 
+         1. Avoid using <br> for layout, use CSS instead
+         2. Inconsistent capitalization of "companion"
+         3. Consider using more semantic tags for emphasis -->
+    identify your knowledge gaps  & fix them in the most efficient way
+    <!-- ISSUE: Text should be properly capitalized and formatted -->
+    </p>
+</header>
+
+<!-- 3. Navigation -->
+<nav class="navigation_bar" role="navigation" aria-label="Main navigation">
+    <!-- ISSUES:
+         1. Inconsistent naming convention (snake_case instead of kebab-case)
+         2. Redundant role="navigation" when using <nav> -->
+    
+    <!-- ✓ Good: Uses aria-current for current page -->
+    <!-- ✓ Good: Includes aria-label -->
+
+<!-- 4. Form Section -->
+<form class="goal-form" action="#" method="POST">
+    <!-- ISSUES:
+         1. Empty action attribute
+         2. No form validation attributes
+         3. No form enctype specified -->
+
+    <!-- Input Groups -->
+    <div class="input-group">
+        <input type="text" id="review-topic" name="review-topic" placeholder="which topic you want to review?" required>
+        <!-- ISSUES:
+             1. Missing explicit label
+             2. Placeholder text has grammatical issues
+             3. No maxlength attribute -->
+    </div>
+
+    <!-- Checkbox Group -->
+    <div class="checkbox-group" role="group" aria-labelledby="exam-type">
+        <!-- ISSUE: aria-labelledby references non-existent ID -->
+        
+        <!-- ISSUES with checkboxes:
+             1. No group label/legend
+             2. No fieldset wrapper
+             3. Inconsistent checkbox structure -->
+
+    <!-- Date Inputs -->
+    <!-- ISSUES:
+         1. Inconsistent label placement
+         2. Missing min/max date constraints
+         3. No date validation -->
+
+    <!-- Buttons -->
+    <div>
+        <!-- ISSUES:
+             1. No semantic grouping for buttons
+             2. Inconsistent button naming convention
+             3. Missing type attributes -->
+</form>
+
+<!-- 5. Response Section -->
+<section id="summary-output-section" class="flex-column summary-output-section">
+    <!-- ISSUES:
+         1. Redundant class names
+         2. Mixing presentation classes with structural
+         3. Unnecessary nesting -->
+
+<!-- 6. Footer -->
+<footer class="footer" role="contentinfo">
+    <!-- ISSUE: Redundant class 'footer' when using semantic <footer> -->
+    
+<!-- 7. Script Section -->
+<!-- ISSUE: Missing defer attribute for script -->
+
+<!-- General Issues:
+     1. Inconsistent indentation
+     2. Mixing of naming conventions (kebab-case, snake_case)
+     3. Inconsistent spacing
+     4. Missing required ARIA attributes in interactive elements
+     5. Inconsistent use of semantic HTML
+     6. No error handling for form submission
+     7. Missing required meta tags (author, keywords)
+     8. No favicon definition
+     9. Missing form validation feedback mechanisms
+     10. Inconsistent heading hierarchy -->
