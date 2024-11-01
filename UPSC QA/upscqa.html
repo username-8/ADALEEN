@@ -2,127 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Smart review - adaptive Learning Companion, to identify knowledge gaps  & fix them in the most efficient way.">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta 
+        name="description" 
+        content="Smart review - adaptive Learning Companion, to identify knowledge gaps  & fix them in the most efficient way"
+    >
     <title>Smart Review - Adaptive Learning Companion</title>
-    <link rel="stylesheet" href="upscqa.css">
-    <style>
-        nav
-            {
-                display: flex;
-                justify-content: space-between;
-                background: linear-gradient(40deg, rgb(0, 4, 236) 10%, rgb(13, 70, 175) 30%, rgb(53, 6, 180));
-                padding: 5px;
-                padding-right: 25px;
-                align-items: center;
-            }
-        nav a
-            {
-                color: aliceblue;
-                text-decoration: none
-            }
-        .top-bar-center
-            {
-                display: flex;
-                justify-content: space-between;
-                width: 60%;
-            }
-    </style>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="upscqa.css"
+    >
 </head>
 <body>
-    <!-- Improved Navigation -->
-<nav class="navbar" aria-label="Main navigation">
-    <div class="navbar_brand">
-        <a href="/" class="navbar_logo-link">
-            <img 
-                src="image/Adaleen_temp_logo.png" 
-                alt="Smart Review Logo"
-                class="navbar_logo-image"
-                width="100" 
-                height="40"
+    <!-- Top Navigation bat section -->
+<nav 
+    class="navbar" 
+    aria-label="Main navigation">
+        <div class="navbar_logo">
+            <a 
+                href="/intex.html" 
+                class="navbar_logo-link"
             >
-        </a>
-    </div>
-    
-    <div class="navbar_menu">
-        <a href="/dashboard" class="navbar_link">Dashboard</a>
-        <a href="/review-space" class="navbar_link" aria-current="page">Review Space</a>
-        <a href="/topics" class="navbar_link">Topics</a>
-        <a href="/pricing" class="navbar_link">Pricing</a>
-        <a href="/about" class="navbar_link">About Us</a>
-    </div>
-    
-    <div class="navbar_actions">
-        <a href="/login" class="button button--login">Log In</a>
-    </div>
+                <img 
+                    src="image/Adaleen-removebg-preview.png" 
+                    alt="Smart Review Logo"
+                    class="navbar_logo-image"
+                    width="100" 
+                    height="40"
+                >
+            </a>
+        </div>        
+        <div class="navbar_menu">
+            <a 
+                href="/dashboard" 
+                class="navbar_link"
+            >Dashboard</a>
+            <a 
+                href="/review-space" 
+                class="navbar_link" 
+                aria-current="page"
+            >Review Space</a>
+            <a 
+                href="/topics" 
+                class="navbar_link"
+            >Topics</a>
+            <a 
+                href="/pricing" 
+                class="navbar_link"
+            >Pricing</a>
+            <a 
+                href="/about" 
+                class="navbar_link"
+            >About Us</a>
+        </div>
+        <div class="navbar_actions">
+            <a 
+                href="/login" 
+                class="button button--login"
+            >Log In</a>
+        </div>
 </nav>
 
-<!-- Improved Hero Section -->
+<!-- Hero Section -->
 <header class="hero">
-    <div class="hero_content">
+<!--like a gallery slideshow thing-->
+    <div class="hero_content"> 
         <h1 class="hero_title">Smart Review</h1>
         <p class="hero_description">
-            <em>Your Adaptive Learning Companion</em>
-        </p>
-        <p class="hero_subtitle">
-            Identify your knowledge gaps and fix them in the most efficient way
+            <em>Your Adaptive Learning Companion for enquiry based learning</em>
         </p>
     </div>
 </header>
-
-<!-- Improved Main Form -->
+<hr>
+<!-- Main area -->
 <main class="main">
-    <section class="goal-section">
+    <section class="goal_section glass">
         <h2 class="section_title">Specify Your Objective</h2>
-        
-        <form class="goal-form" action="/submit-goal" method="POST">
+<!-- form section -->
+        <form 
+            class="goal-form" 
+            action="submit" 
+            method="POST"
+        > <!-- 💀❌ API link to be added here 💀❌-->
+    <!-- review topic input section -->
             <div class="form_group">
-                <label for="review-topic" class="form_label">Topic for Review</label>
+                <label 
+                    for="review-topic" 
+                    class="form_label"
+                >Topic for Review</label>
                 <input 
                     type="text" 
                     id="review-topic" 
                     name="review-topic" 
                     class="form_input"
-                    placeholder="Enter the topic you want to review"
+                    placeholder="oceanography, inter srate dispute, constitutional post, inflationary tools, etc."
                     required
                 >
             </div>
-
-            <fieldset class="form_group">
-                <legend class="form_label">Select Exam Type</legend>
-                <div class="checkbox-group">
-                    <label class="checkbox">
-                        <input 
-                            type="checkbox" 
-                            name="exam" 
-                            value="prelims"
-                            class="checkbox_input"
-                        >
-                        <span class="checkbox_label">Prelims</span>
-                    </label>
-                    
-                    <label class="checkbox">
-                        <input 
-                            type="checkbox" 
-                            name="exam" 
-                            value="mains"
-                            class="checkbox_input"
-                        >
-                        <span class="checkbox_label">Mains</span>
-                    </label>
-                    
-                    <label class="checkbox">
-                        <input 
-                            type="checkbox" 
-                            name="exam" 
-                            value="interview"
-                            class="checkbox_input"
-                        >
-                        <span class="checkbox_label">Interview</span>
-                    </label>
-                </div>
-            </fieldset>
-
+    <br>
+    <!-- exam type input section -->
+            <div class="checkbox-group">
+                <label class="checkbox">
+                    <input
+                        id="for_exam"
+                        type="checkbox" 
+                        name="exam" 
+                        value="prelims"
+                        class="checkbox_input"
+                    >
+                    <span 
+                        class="checkbox_label"
+                    >Prelims</span>
+                </label>
+                <label class="checkbox">
+                    <input 
+                        id="for_exam"
+                        type="checkbox" 
+                        name="exam" 
+                        value="mains"
+                        class="checkbox_input"
+                    >
+                    <span 
+                        class="checkbox_label"
+                    >Mains</span>
+                </label>
+                <label class="checkbox">
+                    <input 
+                        id="for_exam"
+                        type="checkbox" 
+                        name="exam" 
+                        value="interview"
+                        class="checkbox_input"
+                    >
+                    <span 
+                        class="checkbox_label"
+                    >Interview</span>
+                </label>
+            </div>
+    <br>
+    <!-- resource input section -->
             <div class="form_group">
                 <label for="resource" class="form_label">Learning Resource</label>
                 <input 
@@ -131,21 +156,24 @@
                     name="resource" 
                     class="form_input"
                     placeholder="Enter the resource you are using"
-                    required
                 >
             </div>
-
+    <br>
+    <!-- first learned review input section -->
             <div class="form_group">
-                <label for="learn-date" class="form_label">Initial Learning Date</label>
+                <label 
+                    for="learn-date" 
+                    class="form_label"
+                >Initial Learning Date</label>
                 <input 
                     type="date" 
                     id="learn-date" 
                     name="learn-date" 
                     class="form_input"
-                    required
                 >
             </div>
-
+    <br>
+    <!-- last reviewed input section -->
             <div class="form_group">
                 <label for="review-date" class="form_label">Last Review Date</label>
                 <input 
@@ -153,12 +181,15 @@
                     id="review-date" 
                     name="review-date" 
                     class="form_input"
-                    required
                 >
             </div>
-
+    <br>
+    <!-- ADDITIONAL CONTEXT INPUT SECTION -->
             <div class="form_group">
-                <label for="special-request" class="form_label">Additional Context</label>
+                <label 
+                    for="special-request" 
+                    class="form_label"
+                >Additional Context</label>
                 <input 
                     type="text" 
                     id="special-request" 
@@ -167,63 +198,224 @@
                     placeholder="Any specific requirements or notes?"
                 >
             </div>
-
+    <br>
+    <br>
+    <!-- SUBMIT & Reset BUTTON -->
             <div class="form_actions">
                 <button 
                     type="submit" 
-                    class="button button--primary"
-                >
-                    Submit
-                </button>
+                    class="button submit_btn"
+                >Submit</button> &emsp;
                 <button 
                     type="reset" 
-                    class="button button--secondary"
-                >
-                    Reset
-                </button>
+                    class="button reset_btn"
+                >Reset</button>
             </div>
         </form>
     </section>
-
-    <!-- Improved Response Section -->
-    <section class="response-section" aria-label="Generated Response">
+<br>
+<!-- --------------------------------------------------- -->
+<!-- --------------------------------------------------- -->
+    <!-- LLM Response Section -->
+    <section 
+        class="response-section glass" 
+        aria-label="Generated Response"
+    >
         <h2 class="section_title">Generated Response</h2>
-        <div class="response_content">
-            <textarea 
-                id="response-output"
-                class="response_textarea"
-                placeholder="Response will appear here"
-                aria-label="Generated response content"
-                readonly
-            ></textarea>
+        <div class="response_content ">
+            <div class="response_display" >
+                <textarea 
+                    id="response-output"
+                    class="response_textarea "
+                    placeholder="Response will appear here"
+                    aria-label="Generated response content"
+                    readonly
+                ></textarea>
+            </div> <!-- response_display -->
+    <br>
             <div class="response_actions">
                 <button 
                     type="button" 
-                    class="button button--secondary"
+                    class="button copy_btn"
                     aria-label="Copy response"
-                >
-                    Copy
-                </button>
+                >Copy</button> &emsp; &emsp;
                 <button 
                     type="button" 
-                    class="button button--secondary"
+                    class="button regen_btn"
                     aria-label="Regenerate response"
-                >
-                    Regenerate
-                </button>
+                >Regenerate</button>
             </div>
-        </div>
+        </div> <!-- response_content-->
     </section>
 </main>
 
-<!-- Improved Footer -->
-<footer class="footer">
-    <div class="footer_content">
-        <p class="footer_copyright">© 2024 Smart Review. All rights reserved.</p>
-        <nav class="footer_nav" aria-label="Footer navigation">
-            <a href="/privacy" class="footer_link">Privacy Policy</a>
-            <a href="/terms" class="footer_link">Terms of Service</a>
-            <a href="/contact" class="footer_link">Contact Us</a>
-        </nav>
+<br>
+<br>
+    <hr>
+<!-- ------------------------------------------------------- -->
+<!-- Footer section -->
+<footer>
+    <div class="site_content_map">
+        <div class="intro_n_social">
+                <a 
+                    href="/intex.html" 
+                    class="navbar_logo-link"
+                >
+                    <img 
+                        src="image/Adaleen-removebg-preview.png" 
+                        alt="Smart Review Logo"
+                        class="navbar_logo-image"
+                        width="150" 
+                        height="70"
+                    >
+                </a>
+                <p class="text-justify">ADALEEN, is an attempt at creating a truly adaptive learning environment (which has been my dream for the past 5 years). with this i hope to to make a space that that reduces the executive functioning burden that's involved in self directed <a href="">Atomic learning</a>. the site is specifically aimed at adressing the needs of users with executive functioning difficulties.</p>
+                <p class="social-links">
+                    <a 
+                        class="facebook" 
+                        href="https://www.facebook.com/login/"
+                        aria-label="Follow us on Facebook"
+                    >
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a 
+                        class="twitter" 
+                        href="https://twitter.com/login"
+                        aria-label="Follow us on X (Twitter)"
+                    >
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a 
+                        class="linkedin" 
+                        href="https://www.linkedin.com/login"
+                        aria-label="Follow us on LinkedIn"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a 
+                        class="youtube" 
+                        href="https://www.youtube.com/"
+                        aria-label="Follow us on YouTube"
+                    >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a 
+                        class="discord" 
+                        href="https://discord.com/login"
+                        aria-label="Join our Discord server"
+                    >
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a 
+                        class="instagram" 
+                        href="https://www.instagram.com/accounts/login/"
+                        aria-label="Follow us on Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a 
+                        class="github" 
+                        href="https://github.com/login"
+                        aria-label="Follow us on GitHub"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                </p>        
+        </div>
+        <div class="docu_n_ref">
+            <h2>Research & References</h2>
+                <ul 
+                    class="footer-links"
+                    type="none"
+                >
+                    <li>
+                        <a href=""
+                        >Learning Philosophy</a>
+                    </li>
+                    <li>
+                        <a href=""
+                        >on Executive Function</a>
+                    </li>
+                    <li>
+                        <a href=""
+                        >Self Regulated Learning</a>
+                    </li>
+                    <li>
+                        <a href=""
+                        >Mental Representation</a>
+                    </li>
+                    <li>
+                        <a href=""
+                        >Deliberate Practice</a>
+                    </li>
+                    <li>
+                        <a href=""
+                        >Cognitive load</a>
+                    </li>
+                    <li>
+                        <a href=""
+                        >Desirable Difficulty</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="admin_n_contact">
+            <h2>Admin & contact</h2>
+                <ul 
+                    class="footer-links"
+                    type="none"
+                >
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Contribute</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+        </div>
+    </div>  <!--  site nav_links -->
+<hr>
+    <div class="copyright_n_legal_section">
+        <p class="legals_n_disclaimer">
+            <a href="">Legal</a> &emsp;
+            <a href="">Terms of Service</a> &emsp;
+            <a href="">Privacy Policy</a> &emsp;
+            <a href="">Cookie Policy</a> &emsp;
+            <a href="">Accessibility</a> &emsp;
+            <a href="">Ad Choices</a>            
+        </p>
+        <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by smart review & ADALEEN</p>
     </div>
 </footer>
+
+<script>
+    // Get the form element
+const form = document.querySelector('.goal-form');
+
+// Add submit event handler
+form.onsubmit = function(e) {
+    // Prevent form from actually submitting
+    e.preventDefault();
+    
+    // Collect all form data
+    const formData = new FormData(form);
+    
+    // Handle multiple checkbox selections for 'exam'
+    const examValues = formData.getAll('exam');
+    
+    // Convert to regular object
+    const data = Object.fromEntries(formData);
+    
+    // Add exam values as array if multiple selected
+    if (examValues.length > 1) {
+        data.exam = examValues;
+    }
+    
+    // Log the data
+    console.log('Form Submission Data:', data);
+    
+    // Also log raw FormData for verification
+    console.log('Raw Form Data:', ...formData);
+};
+</script>
+
+</body>    
+</html>
