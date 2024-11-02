@@ -149,7 +149,10 @@
     <br>
     <!-- resource input section -->
             <div class="form_group">
-                <label for="resource" class="form_label">Learning Resource</label>
+                <label 
+                    for="resource" 
+                    class="form_label"
+                >Learning Resource</label>
                 <input 
                     type="text" 
                     id="resource" 
@@ -164,7 +167,7 @@
                 <label 
                     for="learn-date" 
                     class="form_label"
-                >Initial Learning Date</label>
+                >When did you first Learn this ?</label>
                 <input 
                     type="date" 
                     id="learn-date" 
@@ -175,7 +178,10 @@
     <br>
     <!-- last reviewed input section -->
             <div class="form_group">
-                <label for="review-date" class="form_label">Last Review Date</label>
+                <label 
+                    for="review-date" 
+                    class="form_label"
+                >When did you last Review this ?</label>
                 <input 
                     type="date" 
                     id="review-date" 
@@ -190,13 +196,12 @@
                     for="special-request" 
                     class="form_label"
                 >Additional Context</label>
-                <input 
-                    type="text" 
+                <textarea 
                     id="special-request" 
                     name="special-request" 
                     class="form_input"
-                    placeholder="Any specific requirements or notes?"
-                >
+                    placeholder="Is there are a specific subtopic or connection you want to focus on? (or) any specific way you want the question to be framed?"
+                ></textarea>
             </div>
     <br>
     <br>
@@ -251,7 +256,6 @@
 
 <br>
 <br>
-    <hr>
 <!-- ------------------------------------------------------- -->
 <!-- Footer section -->
 <footer>
@@ -298,7 +302,9 @@
                         aria-label="Follow us on YouTube"
                     >
                         <i class="fab fa-youtube"></i>
-                    </a>
+                    </a> 
+                </p>
+                <p class="social-links">
                     <a 
                         class="discord" 
                         href="https://discord.com/login"
