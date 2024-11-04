@@ -105,6 +105,17 @@ section h2 {
     transition: width 0.3s ease;
 }
 
+.form_group textarea
+    {
+        width: 100%;
+        min-width: 100px;
+        max-width: 800px;
+        height: 90px;
+        /* Optional: transition for smooth width changes */
+        transition: width 0.3s ease;
+    }
+
+
 /* --------------------- FORM Checkbox STYLE --------------------- */
 
 
