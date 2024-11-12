@@ -396,6 +396,22 @@ async function handleFormSubmit(event) {
     // Prevent the form from reloading the page
     event.preventDefault();
 
+    // Get the response output textarea
+    const responseOutput = document.getElementById("response-output");
+
+    // Set the response output to 'Loading...'
+    responseOutput.value = "Loading";
+
+    // Start loading animation
+    let loadingInterval;
+    loadingInterval = setInterval(() => {
+        if (responseOutput.value.endsWith("...")) {
+            responseOutput.value = "Loading";
+        } else {
+            responseOutput.value += ".";
+        }
+    }, 500);
+
     // Get form data values
     const topic = document.getElementById("review-topic").value;
     const examTypes = Array.from(document.querySelectorAll('input[name="exam"]:checked'))
@@ -414,78 +430,75 @@ async function handleFormSubmit(event) {
                 content: `
                 You are an expert UPSC mentor specializing in creating exam-style assessment questions.
                 
-            QUESTION GENERATION GUIDELINES:
-                0. Distribute questions across taxonomy levels:
-                - SOLO Levels: Pre-structural → Extended abstract
-                - Bloom's Levels: Remembering → Creating
-                1. Create 10 high-quality questions that mirror actual UPSC exam style
-                2. group the question based on levels. 
-                Lower order, Inrermediate, Higher order. (based on taxonomy rules)
-                3. no need to group MCQ questions separately when user is preparing for prelins & mains. ( if the mcq & essay Q requirs same level of reasoning group them together.)
-                4. when the user is only preparing for prelins, 80% of the Questions should be MCQ, 20% as (150 word Q)
-                5. not give any clues in the question sections.
-            
-            ANSWER KEY REQUIREMENTS:
-            
-            1. Model Answer Structure:
-            - Main points required
-            - Common mistakes to avoid
-            - UPSC-specific answer writing techniques
-            - Word limit guidance
+                QUESTION GENERATION GUIDELINES:
+                    0. Distribute questions across taxonomy levels:
+                        - SOLO Levels: Pre-structural → Extended abstract
+                        - Bloom's Levels: Remembering → Creating
+                    1. Create 10 high-quality questions that mirror actual UPSC exam style
+                    2. group the question based on levels. 
+                    Lower order, Inrermediate, Higher order. (based on taxonomy rules)
+                    3. no need to group MCQ questions separately when user is preparing for prelins & mains. ( if the mcq & essay Q requirs same level of reasoning group them together.)
+                    4. when the user is only preparing for prelins, 80% of the Questions should be MCQ, 20% as (150 word Q)
+                    5. not give any clues in the question sections.
+                
+                ANSWER KEY REQUIREMENTS:
+                
+                1. Model Answer Structure:
+                - Main points required
+                - Common mistakes to avoid
+                - UPSC-specific answer writing techniques
+                - Word limit guidance
 
-            2. Evaluation Criteria:
-            - Knowledge depth indicators
-            - Concept linkage markers
-            - Analysis quality metrics
-            - UPSC-specific scoring points
+                2. Evaluation Criteria:
+                - Knowledge depth indicators
+                - Concept linkage markers
+                - Analysis quality metrics
+                - UPSC-specific scoring points
 
-            3. Self-Assessment Guide:
-            - Level-specific mastery indicators
-            - Common misconceptions
-            - Improvement areas
-            - Progressive learning path
+                3. Self-Assessment Guide:
+                - Level-specific mastery indicators
+                - Common misconceptions
+                - Improvement areas
+                - Progressive learning path
 
-            SPECIAL CONSIDERATIONS:
-            - For multiple topics: Equal distribution of questions
-            - For high-level requests: Focus on analytical/evaluative questions
-            - Format: Clean, readable plain text with clear section breaks
-            - Include UPSC-specific tips and tricks
+                SPECIAL CONSIDERATIONS:
+                - For multiple topics: Equal distribution of questions
+                - For high-level requests: Focus on analytical/evaluative questions
+                - Format: Clean, readable plain text with clear section breaks
+                - Include UPSC-specific tips and tricks
 
-            USER EVALUATION METRICS:
-            1. Content Mastery:
-            - Factual accuracy
-            - Concept understanding
-            - Application ability
-            
-            2. Answer Structure:
-            - Organization
-            - Coherence
-            - Completeness
-            
-            3. UPSC-Specific Skills:
-            - Time management suggestions
-            - Word limit adherence
-            - Previous year pattern matching
-            `
+                USER EVALUATION METRICS:
+                1. Content Mastery:
+                - Factual accuracy
+                - Concept understanding
+                - Application ability
+                
+                2. Answer Structure:
+                - Organization
+                - Coherence
+                - Completeness
+                
+                3. UPSC-Specific Skills:
+                - Time management suggestions
+                - Word limit adherence
+                - Previous year pattern matching
+                `
             },
             {
                 role: "user",
                 content: `
-Hello,
+                        Hello,
 
-I am preparing for UPSC-CSE exam, specifically ${examTypes.join(" and ")} 
-i am trying to review & identify my knowledge gaps in "${topic}". 
-I have used these resources ${resource || "and, various resources available on the internet"}. 
-I first learned this topic on ${learnDate || "if i ledt it blank idk"} and last reviewed it on ${reviewDate || "if i ledt it blank idk"}.
+                        I am preparing for UPSC-CSE exam, specifically ${examTypes.join(" and ")} 
+                        i am trying to review & identify my knowledge gaps in "${topic}". 
+                        I have used these resources ${resource || "and, various resources available on the internet"}. 
+                        I first learned this topic on ${learnDate || "if i ledt it blank idk"} and last reviewed it on ${reviewDate || "if i ledt it blank idk"}.
+                        I would like to identify any knowledge gaps I might have, help me accurately assess where i stand & the improvements i need to make ( based on my resonse).
+                        Please provide a few questions for each level, and include detailed answers at the end to help me evaluate my understanding
+                        please respond in plain text format(DO NOT USE .md structure) make sure to structure it well in plain text format, ensure readability.
 
-I would like to identify any knowledge gaps I might have, help me accurately assess where i stand & the improvements i need to make ( based on my resonse).
-
-Please provide a few questions for each level, and include detailed answers at the end to help me evaluate my understanding
-
-please respond in plain text format(DO NOT USE .md structure) make sure to structure it well in plain text format, ensure readability.
-
-${specialRequest}
-`
+                        ${specialRequest}
+                        `
             }
         ]
     };
