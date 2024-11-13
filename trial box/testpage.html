@@ -1,129 +1,239 @@
-
-
-
-<header class="hero" role="banner">
-<nav class="navigation_bar" role="navigation" aria-label="Main navigation">
-    <a href="#home">home Logo</a> <!-- will use icon/logo as button. to be inserted later.  -->
-    <a href="#dashboard">Dashboard</a>
-    <a href="#review_space" aria-current="page">Review space</a>
-    <a href="#topics">Topics</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#about">About Us</a>
-    <a href="#login">Log In</a></nav>
-<!-- hero -->
-<h1>Smart Review</h1>
-<p><em>Your Adaptive Learning companion</em> <br>
-identify your knowledge gaps  & fix them in the most efficient way
-</p>
-</header>
-
-
-
-
-
-
-
-
-<!-- 1. DOCTYPE and Basic Structure -->
-<!DOCTYPE html>  <!-- ✓ Correct HTML5 DOCTYPE declaration -->
-<html lang="en"> <!-- ✓ Good: Includes language attribute -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- ✓ Correct charset declaration -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✓ Good: Responsive viewport -->
-    <meta name="description" content="Smart review - adaptive Learning Companion, to identify knowledge gaps  & fix them in the most efficient way.">
-    <!-- ISSUE: Description could be more concise and specific -->
-    
-    <title>Smart review - adaptive Learning Companion</title>
-    <!-- ISSUE: Inconsistent capitalization (Smart review vs. Learning Companion) -->
-    
-    <link rel="stylesheet" href="upscqa.css">
-    <!-- ISSUE: Non-descriptive filename, consider more semantic naming -->
+    <meta charset="UTF-8">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Document</title>
 
-<!-- 2. Header Section -->
-<header class="header" role="banner">
-    <!-- ISSUE: Redundant class 'header' when using semantic <header> -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous"
+    >
+
+</head>
+<body>
+    
+<header 
+    class="hero" 
+    role="banner"
+>
+
+    </a>
+
+<nav 
+    class="
+        navbar 
+        navbar-expand-lg 
+        navbar-dark 
+        bg-dark"
+>
+    
+<a 
+    class="navbar-brand" 
+    href="/index.html"
+>
+    <img 
+        src="/UPSC QA/image/Adaleen-removebg-preview.png" 
+        alt="Smart Review Logo"
+        class="navbar_logo-image"
+        width="100" 
+        height="40"
+    >
+</a>
+    
+    <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div 
+        class="
+            collapse 
+            navbar-collapse" 
+        id="navbarSupportedContent"
+    >
+        <ul class="
+                navbar-nav 
+                mr-auto"
+        >
+            <li class="nav-item active">
+                <a 
+                    class="nav-link" 
+                    href="/UPSC QA/dashboard.html"
+                >Dashboard 
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link" 
+                    href="/UPSC QA/upscqa.html"
+                    aria-current="page"
+                >Review Space</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a 
+                    class="nav-link dropdown-toggle" 
+                    href="/UPSC QA/topics" 
+                    id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"
+                >Topics
+                </a>
+                    <div 
+                        class="dropdown-menu" 
+                        aria-labelledby="navbarDropdown"
+                    >
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Art & Culture</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >History</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Geography</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Indian Society</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Polity</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Constitution</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Social Justice</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Economics</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Science & Technology</a>
+                        <a 
+                        class="dropdown-item" 
+                        href="#"
+                        >Disaster Management</a>
+                    </div>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link disabled" 
+                    href="#"
+                >Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link disabled" 
+                    href="#"
+                >About us</a>
+            </li>
+        </ul>
+
+        <form 
+        class="
+            form-inline 
+            my-2 
+            my-lg-0
+            mr-auto"
+        >
+            <input 
+                class="
+                    form-control 
+                    mr-sm-2" 
+                type="search" 
+                placeholder="Search" 
+                aria-label="Search">
+            <button 
+                class="
+                    btn 
+                    btn-outline-success 
+                    my-2 
+                    my-sm-0" 
+                type="submit"
+            >Search</button>
+        </form>
+        
+        <button 
+            class="
+                btn
+                btn-primary
+                me-auto" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-login-icon">Log In</span>
+        </button>
+        <p></p>
+        <button 
+            class="
+                btn
+                btn-secondary
+                me-auto" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-login-icon">Sign Up</span>
+        </button>
+    </div>
+</nav>
+
+
+    <!-- hero -->
     <h1>Smart Review</h1>
-    <!-- ISSUE: Inconsistent branding (Smart review vs Smart Review) -->
-    <p><em>Your Adaptive Learning companion</em> <br>
-    <!-- ISSUES: 
-         1. Avoid using <br> for layout, use CSS instead
-         2. Inconsistent capitalization of "companion"
-         3. Consider using more semantic tags for emphasis -->
+    <p><em>Your Adaptive Learning companion</em> 
+    <br>
     identify your knowledge gaps  & fix them in the most efficient way
-    <!-- ISSUE: Text should be properly capitalized and formatted -->
     </p>
 </header>
 
-<!-- 3. Navigation -->
-<nav class="navigation_bar" role="navigation" aria-label="Main navigation">
-    <!-- ISSUES:
-         1. Inconsistent naming convention (snake_case instead of kebab-case)
-         2. Redundant role="navigation" when using <nav> -->
-    
-    <!-- ✓ Good: Uses aria-current for current page -->
-    <!-- ✓ Good: Includes aria-label -->
 
-<!-- 4. Form Section -->
-<form class="goal-form" action="#" method="POST">
-    <!-- ISSUES:
-         1. Empty action attribute
-         2. No form validation attributes
-         3. No form enctype specified -->
+<!-- ------------------------- SCRIPTS ---------------------------- -->
 
-    <!-- Input Groups -->
-    <div class="input-group">
-        <input type="text" id="review-topic" name="review-topic" placeholder="which topic you want to review?" required>
-        <!-- ISSUES:
-             1. Missing explicit label
-             2. Placeholder text has grammatical issues
-             3. No maxlength attribute -->
-    </div>
+<script 
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"
+></script>
+<script 
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"
+></script>
+<script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"
+></script>
 
-    <!-- Checkbox Group -->
-    <div class="checkbox-group" role="group" aria-labelledby="exam-type">
-        <!-- ISSUE: aria-labelledby references non-existent ID -->
-        
-        <!-- ISSUES with checkboxes:
-             1. No group label/legend
-             2. No fieldset wrapper
-             3. Inconsistent checkbox structure -->
-
-    <!-- Date Inputs -->
-    <!-- ISSUES:
-         1. Inconsistent label placement
-         2. Missing min/max date constraints
-         3. No date validation -->
-
-    <!-- Buttons -->
-    <div>
-        <!-- ISSUES:
-             1. No semantic grouping for buttons
-             2. Inconsistent button naming convention
-             3. Missing type attributes -->
-</form>
-
-<!-- 5. Response Section -->
-<section id="summary-output-section" class="flex-column summary-output-section">
-    <!-- ISSUES:
-         1. Redundant class names
-         2. Mixing presentation classes with structural
-         3. Unnecessary nesting -->
-
-<!-- 6. Footer -->
-<footer class="footer" role="contentinfo">
-    <!-- ISSUE: Redundant class 'footer' when using semantic <footer> -->
-    
-<!-- 7. Script Section -->
-<!-- ISSUE: Missing defer attribute for script -->
-
-<!-- General Issues:
-     1. Inconsistent indentation
-     2. Mixing of naming conventions (kebab-case, snake_case)
-     3. Inconsistent spacing
-     4. Missing required ARIA attributes in interactive elements
-     5. Inconsistent use of semantic HTML
-     6. No error handling for form submission
-     7. Missing required meta tags (author, keywords)
-     8. No favicon definition
-     9. Missing form validation feedback mechanisms
-     10. Inconsistent heading hierarchy -->
+</body>
+</html>
