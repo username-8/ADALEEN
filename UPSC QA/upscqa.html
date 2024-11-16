@@ -17,58 +17,202 @@
     >
     <link 
         rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous"
+    >
+
+    <link 
+        rel="stylesheet" 
         href="upscqa.css"
     >
 </head>
 <body>
-    <!-- Top Navigation bat section -->
+
 <nav 
-    class="navbar" 
-    aria-label="Main navigation">
-        <div class="navbar_logo">
-            <a 
-                href="/index.html" 
-                class="navbar_logo-link"
-            >
-                <img 
-                    src="image/Adaleen-removebg-preview.png" 
-                    alt="Smart Review Logo"
-                    class="navbar_logo-image"
-                    width="100" 
-                    height="40"
-                >
-            </a>
-        </div>        
-        <div class="navbar_menu">
-            <a 
-                href="/dashboard" 
-                class="navbar_link"
-            >Dashboard</a>
-            <a 
-                href="/review-space" 
-                class="navbar_link" 
-                aria-current="page"
-            >Review Space</a>
-            <a 
-                href="/topics" 
-                class="navbar_link"
-            >Topics</a>
-            <a 
-                href="/pricing" 
-                class="navbar_link"
-            >Pricing</a>
-            <a 
-                href="/about" 
-                class="navbar_link"
-            >About Us</a>
-        </div>
-        <div class="navbar_actions">
-            <a 
-                href="/login" 
-                class="button button--login"
-            >Log In</a>
-        </div>
+    class="
+        navbar 
+        navbar-expand-lg 
+        navbar-dark
+        sticky-top 
+        bg-dark"
+>
+    
+<a 
+    class="navbar-brand" 
+    href="/index.html"
+>
+    <img 
+        src="/UPSC QA/image/Adaleen-removebg-preview.png" 
+        alt="Smart Review Logo"
+        class="navbar_logo-image"
+        width="100" 
+        height="40"
+    >
+</a>
+    
+    <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div 
+        class="
+            collapse 
+            navbar-collapse" 
+        id="navbarSupportedContent"
+    >
+        <ul class="
+                navbar-nav 
+                mr-auto"
+        >
+            <li class="nav-item active">
+                <a 
+                    class="nav-link" 
+                    href="/UPSC QA/dashboard.html"
+                >Dashboard 
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link" 
+                    href="/UPSC QA/upscqa.html"
+                    aria-current="page"
+                >Review Space</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a 
+                    class="nav-link dropdown-toggle" 
+                    href="/UPSC QA/topics" 
+                    id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"
+                >Topics
+                </a>
+                    <div 
+                        class="dropdown-menu" 
+                        aria-labelledby="navbarDropdown"
+                    >
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Art & Culture</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >History</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Geography</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Indian Society</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Polity</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Constitution</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Social Justice</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Economics</a>
+                        <a 
+                            class="dropdown-item" 
+                            href="#"
+                        >Science & Technology</a>
+                        <a 
+                        class="dropdown-item" 
+                        href="#"
+                        >Disaster Management</a>
+                    </div>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link disabled" 
+                    href="#"
+                >Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link disabled" 
+                    href="#"
+                >About us</a>
+            </li>
+        </ul>
+
+        <form 
+        class="
+            form-inline 
+            my-2 
+            my-lg-0
+            mr-auto"
+        >
+            <input 
+                class="
+                    form-control 
+                    mr-sm-2" 
+                type="search" 
+                placeholder="Search" 
+                aria-label="Search">
+            <button 
+                class="
+                    btn 
+                    btn-outline-success 
+                    my-2 
+                    my-sm-0" 
+                type="submit"
+            >Search</button>
+        </form>
+        
+        <button 
+            class="
+                btn
+                btn-primary
+                me-auto" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-login-icon">Log In</span>
+        </button>
+        <p></p>
+        <button 
+            class="
+                btn
+                btn-secondary
+                me-auto" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-login-icon">Sign Up</span>
+        </button>
+    </div>
 </nav>
+
+
 
 <!-- Hero Section -->
 <header class="hero">
@@ -389,6 +533,29 @@
         <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by smart review & ADALEEN</p>
     </div>
 </footer>
+
+
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- -------------------------------- SCRIPT ---------------------------------------- -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<script 
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"
+></script>
+<script 
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"
+></script>
+<script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"
+></script>
+
 
 <script>
 // Function to handle form submission
