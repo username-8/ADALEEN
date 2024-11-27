@@ -567,17 +567,17 @@ async function handleFormSubmit(event) {
     const responseOutput = document.getElementById("response-output");
 
     // Set the response output to 'Loading...'
-    responseOutput.value = "Loading";
+    //responseOutput.value = "Loading";
 
     // Start loading animation
-    let loadingInterval;
-    loadingInterval = setInterval(() => {
-        if (responseOutput.value.endsWith("...")) {
-            responseOutput.value = "Loading";
-        } else {
-            responseOutput.value += ".";
-        }
-    }, 500);
+    //let loadingInterval;
+    //loadingInterval = setInterval(() => {
+    //    if (responseOutput.value.endsWith("...")) {
+    //        responseOutput.value = "Loading";
+    //    } else {
+    //        responseOutput.value += ".";
+    //    }
+    //}, 500);
 
     // Get form data values
     const topic = document.getElementById("review-topic").value;
