@@ -250,9 +250,29 @@
                     required
                 >
             </div>
-    <br>
+        
+            <div class="form_group">
+                <label 
+                    for="self-assessment" 
+                    class="form_label"
+                >Current status</label>
+                <input 
+                    type="text" 
+                    id="review-topic" 
+                    name="review-topic" 
+                    class="form_input"
+                    placeholder="what do you already know about the topic."
+                    required
+                >
+            </div> <br>
+            <div>
+                <label type="radio" for="exam type">
+                    <input type="radio" value="prelims"> prelims
+                    <input type="radio" value="mains"> mains 
+                </label>
+            </div>
     <!-- exam type input section -->
-            <div class="checkbox-group">
+            <!-- <div class="checkbox-group">
                 <label class="checkbox">
                     <input
                         type="checkbox" 
@@ -287,7 +307,7 @@
                     >Interview</span>
                 </label>
             </div>
-    <br>
+    <br> -->
     <!-- resource input section -->
             <div class="form_group">
                 <label 
@@ -299,7 +319,7 @@
                     id="resource" 
                     name="resource" 
                     class="form_input"
-                    placeholder="Enter the resource you are using"
+                    placeholder="books, article, lecture, Enter the resource you are using,"
                 >
             </div>
     <br>
@@ -308,12 +328,39 @@
                 <label 
                     for="learn-date" 
                     class="form_label"
-                >by when do you want to finish Learning this ?</label>
+                >learning deadline </label>
                 <input 
                     type="date" 
                     id="learn-date" 
                     name="learn-date" 
                     class="form_input"
+                    placeholder="when do you want to finish Learning this"
+                >
+            </div>
+            <div class="form_group">
+                <label 
+                    for="learn-date" 
+                    class="form_label"
+                >review deadline </label>
+                <input 
+                    type="date" 
+                    id="learn-date" 
+                    name="learn-date" 
+                    class="form_input"
+                    placeholder="when do you want to finish Learning this"
+                >
+            </div>
+            <div class="form_group">
+                <label 
+                    for="learn-date" 
+                    class="form_label"
+                >exam deadline </label>
+                <input 
+                    type="date" 
+                    id="learn-date" 
+                    name="learn-date" 
+                    class="form_input"
+                    placeholder="when do you want to finish Learning this"
                 >
             </div>
     <br>
@@ -330,7 +377,21 @@
                     class="form_input"
                 >
             </div> -->
-    <br>
+
+            <div class="form_group">
+                <label 
+                    for="review-topic" 
+                    class="form_label"
+                >Institute</label>
+                <input 
+                    type="text" 
+                    id="review-topic" 
+                    name="review-topic" 
+                    class="form_input"
+                    placeholder="name of the institute(s), or self learned" 
+                    required
+                >
+            </div>
     <!-- ADDITIONAL CONTEXT INPUT SECTION -->
             <div class="form_group">
                 <label 
@@ -342,7 +403,9 @@
                     id="special-request" 
                     name="special-request" 
                     class="form_input"
-                    placeholder="Is there are a specific subtopic or connection you want to focus on? (or) any specific way you want the question to be framed?"
+                    placeholder="What specifically do you wwant to accomplish with this test, what are your goals, 
+Is there are a specific subtopic or connection you want to focus on? (or) 
+any specific way you want the question to be framed?"
                 ></textarea>
             </div>
     <br>
